@@ -1,0 +1,56 @@
+$ ab -c 10 -n 1000 -l http://localhost:9494/backend/multi
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            9494
+
+Document Path:          /backend/multi
+Document Length:        Variable
+
+Concurrency Level:      10
+Time taken for tests:   7.423 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      131903 bytes
+HTML transferred:       40903 bytes
+Requests per second:    134.71 [#/sec] (mean)
+Time per request:       74.233 [ms] (mean)
+Time per request:       7.423 [ms] (mean, across all concurrent requests)
+Transfer rate:          17.35 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.3      0       4
+Processing:     7   73  16.5     69     154
+Waiting:        6   72  16.5     69     154
+Total:         11   73  16.5     70     155
+ERROR: The median and mean for the initial connection time are more than twice the standard
+       deviation apart. These results are NOT reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%     70
+  66%     76
+  75%     78
+  80%     81
+  90%     88
+  95%     95
+  98%    141
+  99%    149
+ 100%    155 (longest request)

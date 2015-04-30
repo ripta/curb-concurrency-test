@@ -1,0 +1,54 @@
+$ ab -c 10 -n 1000 -l http://localhost:9494/backend/easy
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            9494
+
+Document Path:          /backend/easy
+Document Length:        Variable
+
+Concurrency Level:      10
+Time taken for tests:   14.314 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      132729 bytes
+HTML transferred:       41729 bytes
+Requests per second:    69.86 [#/sec] (mean)
+Time per request:       143.140 [ms] (mean)
+Time per request:       14.314 [ms] (mean, across all concurrent requests)
+Transfer rate:          9.06 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.4      1       7
+Processing:    14  141  23.7    143     196
+Waiting:       13  140  23.7    142     195
+Total:         16  142  24.0    144     197
+
+Percentage of the requests served within a certain time (ms)
+  50%    144
+  66%    153
+  75%    162
+  80%    164
+  90%    173
+  95%    178
+  98%    187
+  99%    191
+ 100%    197 (longest request)

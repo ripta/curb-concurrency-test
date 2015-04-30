@@ -1,0 +1,54 @@
+$ ab -c 25 -n 2500 -l http://localhost:9494/backend/multi
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 250 requests
+Completed 500 requests
+Completed 750 requests
+Completed 1000 requests
+Completed 1250 requests
+Completed 1500 requests
+Completed 1750 requests
+Completed 2000 requests
+Completed 2250 requests
+Completed 2500 requests
+Finished 2500 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            9494
+
+Document Path:          /backend/multi
+Document Length:        Variable
+
+Concurrency Level:      25
+Time taken for tests:   32.790 seconds
+Complete requests:      2500
+Failed requests:        0
+Total transferred:      330832 bytes
+HTML transferred:       103332 bytes
+Requests per second:    76.24 [#/sec] (mean)
+Time per request:       327.905 [ms] (mean)
+Time per request:       13.116 [ms] (mean, across all concurrent requests)
+Transfer rate:          9.85 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   1.4      1      27
+Processing:     7  322 169.5    256     732
+Waiting:        7  322 169.4    256     731
+Total:         12  324 170.4    257     735
+
+Percentage of the requests served within a certain time (ms)
+  50%    257
+  66%    383
+  75%    483
+  80%    520
+  90%    587
+  95%    634
+  98%    677
+  99%    690
+ 100%    735 (longest request)
